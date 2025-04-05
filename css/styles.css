@@ -472,6 +472,10 @@ img {
   align-items: baseline;
 }
 
+.footer-social {
+  margin-right: 80px;
+}
+
 .footer-social-subtitle {
   font-size: 16px;
   color: #fff;
@@ -510,6 +514,75 @@ img {
   fill: #f4f4fd;
 }
 
+.footer-form-field {
+  display: flex;
+}
+.footer-sub-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.footer-form {
+}
+.footer-form-label {
+  margin-right: 24px;
+}
+.footer-input {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  min-width: 264px;
+  height: 40px;
+  background-color: transparent;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  outline: none;
+  padding-left: 16px;
+}
+
+.footer-input::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.footer-form-btn {
+  display: block;
+  position: relative;
+  border-radius: 4px;
+  min-width: 165px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  text-align: left;
+  padding-left: 24px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form-btn:hover,
+.footer-form-btn:focus {
+  background-color: #404bbf;
+}
+
+.footer-form-icon {
+  fill: #fff;
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 /* ---------------MODAL--------------------- */
 
 .backdrop {
@@ -518,7 +591,17 @@ img {
   position: fixed;
   background-color: rgba(46, 47, 66, 0.4);
   top: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
+
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
 .modal {
   width: 408px;
   min-height: 584px;
@@ -544,6 +627,9 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-icon {
@@ -579,6 +665,10 @@ img {
   margin-bottom: 8px;
 }
 
+.form-input-wrap {
+  position: relative;
+}
+
 .textarea-field {
   margin-bottom: 16px;
 }
@@ -600,10 +690,17 @@ img {
   padding-bottom: 11px;
   padding-left: 38px;
   outline: transparent;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:focus-within {
   border-color: #4d5ae5;
+}
+
+.form-input:focus-within + .form-icon {
+  fill: #4d5ae5;
 }
 
 .form-textarea {
@@ -613,8 +710,8 @@ img {
   height: 120px;
   resize: none;
   outline: transparent;
-  padding-left: 16px;
-  padding-top: 8px;
+  padding: 8px 16px;
+  display: block;
 }
 
 .form-textarea::placeholder {
@@ -632,8 +729,29 @@ img {
 }
 .modal-check {
 }
-.modal-check-icon {
+
+.form-checkbox {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  margin-right: 8px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.modal-check:checked + .form-policy-label .form-checkbox {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
+}
+
 .form-submit-btn {
   display: block;
   margin: 0 auto;
@@ -651,11 +769,35 @@ img {
   color: #fff;
   border: none;
   cursor: pointer;
+  margin-top: 24px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-submit-btn:hover,
 .form-submit-btn:focus {
   background-color: #404bbf;
+}
+
+.form-policy-label {
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  display: flex;
+  align-items: center;
+}
+
+.form-icon {
+  fill: #2e2f42;
+  position: absolute;
+  left: 19px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ----------------------FOOTER----------------------- */
