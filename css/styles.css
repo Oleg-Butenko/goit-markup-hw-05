@@ -514,7 +514,7 @@ img {
   fill: #f4f4fd;
 }
 
-.footer-form-field {
+.footer-form {
   display: flex;
 }
 .footer-sub-text {
@@ -525,8 +525,7 @@ img {
   color: #fff;
   margin-bottom: 16px;
 }
-.footer-form {
-}
+
 .footer-form-label {
   margin-right: 24px;
 }
