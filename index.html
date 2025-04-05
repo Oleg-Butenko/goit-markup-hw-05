@@ -473,5 +473,78 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop">
+      <div class="modal">
+        <button class="modal-close-btn" type="button">
+          <svg class="close-icon" width="8" height="8">
+            <use href="./images/icons.svg#close-icon"></use>
+          </svg>
+        </button>
+        <p class="modal-text">Leave your contacts and we will call you back</p>
+        <form class="modal-form">
+          <div class="form-field">
+            <label class="form-label" for="user-name">Name</label>
+            <input
+              id="user-name"
+              name="user-name"
+              class="form-input"
+              type="text"
+            />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="user-phone">Phone</label>
+            <input
+              id="user-phone"
+              name="user-phone"
+              class="form-input"
+              type="number"
+            />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="user-email">Email</label>
+            <input
+              id="user-email"
+              name="user-email"
+              class="form-input"
+              type="email"
+            />
+          </div>
+
+          <div class="form-field textarea-field">
+            <label class="form-label" for="user-comment">Comment</label>
+            <textarea
+              placeholder="Text input"
+              name="user-comment"
+              id="user-comment"
+              class="form-textarea"
+            ></textarea>
+          </div>
+
+          <div class="form-field">
+            <input
+              class="modal-check visually-hidden"
+              type="checkbox"
+              name="policy"
+              id="policy"
+              value="true"
+            />
+            <span>
+              <svg width="10" height="8" class="modal-check-icon">
+                <use href="./images/icons.svg#icon-check"></use>
+              </svg>
+            </span>
+            <label for="policy" class="form-label"
+              >I accept the terms and conditions of the
+              <a class="form-policy-link" href="">Privacy Policy</a></label
+            >
+          </div>
+
+          <button class="form-submit-btn" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
